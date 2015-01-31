@@ -5,6 +5,8 @@
  */
 package clotui;
 
+import javax.swing.ButtonGroup;
+
 /**
  *
  * @author Rahul
@@ -16,8 +18,13 @@ public class NewJFrame extends javax.swing.JFrame {
      */
     public NewJFrame() {
         initComponents();
+        groupButton();
     }
-
+    private void groupButton(){
+    ButtonGroup bg1=new ButtonGroup();
+    bg1.add(rdbContPref1);
+    bg1.add(rdbContPref2);
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -30,7 +37,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         lblBloodGroup1 = new javax.swing.JLabel();
-        rdbAlternateContact = new javax.swing.JRadioButton();
+        rdbContPref2 = new javax.swing.JRadioButton();
         lblEmergencyContactNumber = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         cbxBloodGroup = new javax.swing.JComboBox();
@@ -43,7 +50,7 @@ public class NewJFrame extends javax.swing.JFrame {
         lblEmergencyContactName = new javax.swing.JTextField();
         lblage = new javax.swing.JLabel();
         lblName1 = new javax.swing.JLabel();
-        rdbOneSelf = new javax.swing.JRadioButton();
+        rdbContPref1 = new javax.swing.JRadioButton();
         jLabel2 = new javax.swing.JLabel();
         txtAge1 = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
@@ -68,7 +75,12 @@ public class NewJFrame extends javax.swing.JFrame {
 
         lblBloodGroup1.setText("Blood Group");
 
-        rdbAlternateContact.setText("Alternate Contact");
+        rdbContPref2.setText("Alternate Contact");
+        rdbContPref2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rdbContPref2ActionPerformed(evt);
+            }
+        });
 
         lblEmergencyContactNumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,7 +125,12 @@ public class NewJFrame extends javax.swing.JFrame {
 
         lblName1.setText("Name :");
 
-        rdbOneSelf.setText("One-self");
+        rdbContPref1.setText("One-self");
+        rdbContPref1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rdbContPref1ActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Emergency Contact Number");
 
@@ -164,9 +181,9 @@ public class NewJFrame extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(lblContactPreference)
                                     .addGap(18, 18, 18)
-                                    .addComponent(rdbOneSelf)
+                                    .addComponent(rdbContPref1)
                                     .addGap(18, 18, 18)
-                                    .addComponent(rdbAlternateContact)))
+                                    .addComponent(rdbContPref2)))
                             .addGap(0, 0, Short.MAX_VALUE)))
                     .addGap(66, 66, 66)))
         );
@@ -202,8 +219,8 @@ public class NewJFrame extends javax.swing.JFrame {
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(lblContactPreference)
-                        .addComponent(rdbOneSelf)
-                        .addComponent(rdbAlternateContact))
+                        .addComponent(rdbContPref1)
+                        .addComponent(rdbContPref2))
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
@@ -378,6 +395,14 @@ public class NewJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPhoneNoActionPerformed
 
+    private void rdbContPref1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbContPref1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rdbContPref1ActionPerformed
+
+    private void rdbContPref2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbContPref2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rdbContPref2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -407,6 +432,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new NewJFrame().setVisible(true);
             }
@@ -437,8 +463,8 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel lblPhoneNo;
     private javax.swing.JLabel lblage;
     private javax.swing.JLabel lblage2;
-    private javax.swing.JRadioButton rdbAlternateContact;
-    private javax.swing.JRadioButton rdbOneSelf;
+    private javax.swing.JRadioButton rdbContPref1;
+    private javax.swing.JRadioButton rdbContPref2;
     private javax.swing.JTextField txtAddress;
     private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtAge1;

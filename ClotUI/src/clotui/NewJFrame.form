@@ -111,9 +111,9 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="lblContactPreference" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="rdbOneSelf" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rdbContPref1" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="rdbAlternateContact" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rdbContPref2" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -161,8 +161,8 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lblContactPreference" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rdbOneSelf" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rdbAlternateContact" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdbContPref1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdbContPref2" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -176,10 +176,13 @@
                 <Property name="text" type="java.lang.String" value="Blood Group"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="rdbAlternateContact">
+            <Component class="javax.swing.JRadioButton" name="rdbContPref2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Alternate Contact"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rdbContPref2ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="lblEmergencyContactNumber">
               <Events>
@@ -252,10 +255,13 @@
                 <Property name="text" type="java.lang.String" value="Name :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="rdbOneSelf">
+            <Component class="javax.swing.JRadioButton" name="rdbContPref1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="One-self"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rdbContPref1ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel2">
               <Properties>
