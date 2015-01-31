@@ -19,7 +19,6 @@ public class ClotUI {
         NewJFrame form=new NewJFrame();
         form.setVisible(true);
         System.out.println("Hello");
- 
     }
     
 }
