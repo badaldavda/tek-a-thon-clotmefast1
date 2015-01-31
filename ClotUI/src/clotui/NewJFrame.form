@@ -65,7 +65,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="lblName1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblage" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblAge" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -102,7 +102,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblage2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblContactNo" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="lblContact" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -138,7 +138,7 @@
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblage" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblAge" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtAge1" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtNearestRailwayStation1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -150,7 +150,7 @@
                           </Group>
                           <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblage2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblContactNo" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="lblEmergencyContactName" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -225,7 +225,7 @@
                 <Property name="text" type="java.lang.String" value="Contact"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblage2">
+            <Component class="javax.swing.JLabel" name="lblContactNo">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Emergency Contact Name"/>
               </Properties>
@@ -242,7 +242,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="lblEmergencyContactName">
             </Component>
-            <Component class="javax.swing.JLabel" name="lblage">
+            <Component class="javax.swing.JLabel" name="lblAge">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Age"/>
               </Properties>
@@ -303,7 +303,7 @@
                                       </Group>
                                       <Component id="txtAge" alignment="0" max="32767" attributes="0"/>
                                       <Component id="txtName" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="cvxBloodGroup" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="cbxBloodGroup2" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                               </Group>
@@ -352,7 +352,7 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lblBloodGroup" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="cvxBloodGroup" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cbxBloodGroup2" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -395,7 +395,7 @@
                 <Property name="text" type="java.lang.String" value="City"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="cvxBloodGroup">
+            <Component class="javax.swing.JComboBox" name="cbxBloodGroup2">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="8">
