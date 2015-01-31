@@ -318,15 +318,9 @@
                                       <Component id="txtCity" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="lblPincode" alignment="1" min="-2" pref="78" max="-2" attributes="0"/>
-                                      <Component id="lblEmergencyNo" alignment="1" min="-2" pref="78" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="lblEmergencyNo" min="-2" pref="78" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="txtPincode" alignment="0" pref="72" max="32767" attributes="0"/>
-                                      <Component id="txtEmergencyNo" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
+                                  <Component id="txtEmergencyNo" min="-2" pref="72" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
@@ -369,9 +363,7 @@
                           </Group>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lblCity" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblPincode" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtCity" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtPincode" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -412,8 +404,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtCity">
-            </Component>
-            <Component class="javax.swing.JTextField" name="txtPincode">
             </Component>
             <Component class="javax.swing.JTextField" name="txtName">
             </Component>
@@ -487,14 +477,6 @@
                   <Color blue="ff" green="cc" red="cc" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Nearest Railway Station"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="lblPincode">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="cc" red="cc" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Pincode"/>
               </Properties>
             </Component>
           </SubComponents>

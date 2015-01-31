@@ -50,7 +50,6 @@ public class NewJFrame extends javax.swing.JFrame {
         lblCity = new javax.swing.JLabel();
         cvxBloodGroup = new javax.swing.JComboBox();
         txtCity = new javax.swing.JTextField();
-        txtPincode = new javax.swing.JTextField();
         txtName = new javax.swing.JTextField();
         txtAddress = new javax.swing.JTextField();
         txtAge = new javax.swing.JTextField();
@@ -64,7 +63,6 @@ public class NewJFrame extends javax.swing.JFrame {
         lblAddress = new javax.swing.JLabel();
         lblEmergencyNo = new javax.swing.JLabel();
         lblNearestRailwayStation = new javax.swing.JLabel();
-        lblPincode = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -249,9 +247,6 @@ public class NewJFrame extends javax.swing.JFrame {
         lblNearestRailwayStation.setBackground(new java.awt.Color(204, 204, 255));
         lblNearestRailwayStation.setText("Nearest Railway Station");
 
-        lblPincode.setBackground(new java.awt.Color(204, 204, 255));
-        lblPincode.setText("Pincode");
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -289,13 +284,9 @@ public class NewJFrame extends javax.swing.JFrame {
                                 .addComponent(txtPhoneNo, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
                                 .addComponent(txtCity))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblPincode, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(lblEmergencyNo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblEmergencyNo, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtPincode, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
-                                .addComponent(txtEmergencyNo))))
+                            .addComponent(txtEmergencyNo, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGap(11, 11, 11)))
         );
         jPanel2Layout.setVerticalGroup(
@@ -327,9 +318,7 @@ public class NewJFrame extends javax.swing.JFrame {
                             .addGap(3, 3, 3)))
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(lblCity)
-                        .addComponent(lblPincode)
-                        .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtPincode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGap(18, 18, 18)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(txtPhoneNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -446,7 +435,6 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel lblName1;
     private javax.swing.JLabel lblNearestRailwayStation;
     private javax.swing.JLabel lblPhoneNo;
-    private javax.swing.JLabel lblPincode;
     private javax.swing.JLabel lblage;
     private javax.swing.JLabel lblage2;
     private javax.swing.JRadioButton rdbAlternateContact;
@@ -462,6 +450,5 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JTextField txtNearestRailwayStation;
     private javax.swing.JTextField txtNearestRailwayStation1;
     private javax.swing.JTextField txtPhoneNo;
-    private javax.swing.JTextField txtPincode;
     // End of variables declaration//GEN-END:variables
 }
