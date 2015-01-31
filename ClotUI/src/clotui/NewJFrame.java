@@ -5,7 +5,15 @@
  */
 package clotui;
 
+import  java.lang.*;
 import static java.lang.Integer.parseInt;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ButtonGroup;
 
 /**
@@ -84,6 +92,12 @@ public class NewJFrame extends javax.swing.JFrame {
 
         cvxBloodGroup.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" }));
 
+        txtAge.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAgeActionPerformed(evt);
+            }
+        });
+
         txtNearestRailwayStation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNearestRailwayStationActionPerformed(evt);
@@ -101,6 +115,12 @@ public class NewJFrame extends javax.swing.JFrame {
 
         LblAge.setBackground(new java.awt.Color(204, 204, 255));
         LblAge.setText("Age");
+
+        txtEmergencyNo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEmergencyNoActionPerformed(evt);
+            }
+        });
 
         lblBloodGroup.setBackground(new java.awt.Color(204, 204, 255));
         lblBloodGroup.setText("Blood Group");
@@ -456,7 +476,53 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_rdbContPref2ActionPerformed
 
     private void btnAddDonorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddDonorActionPerformed
+
         // TODO add your handling code here:
+        
+        final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
+   final String DB_URL = "jdbc:mysql://localhost/cmf";
+
+   //  Database credentials
+    final String USER = "root";
+    final String PASS = "";
+        
+         Connection conn = null;
+         Statement stmt = null;
+         try{
+      //STEP 2: Register JDBC driver
+      Class.forName("com.mysql.jdbc.Driver");
+
+      //STEP 3: Open a connection
+      System.out.println("Connecting to a selected database...");
+      conn = DriverManager.getConnection(DB_URL, USER, PASS);
+      System.out.println("Connected database successfully...");
+      
+      
+      String name = txtName.getText();
+      String BloodGroup =(String) cvxBloodGroup.getSelectedItem();
+      int age = parseInt(txtAge.getText());
+      String address = txtAddress.getText();
+      String NRS = txtNearestRailwayStation.getText();
+      String city = txtCity.getText();
+      String PhNo = txtPhoneNo.getText();
+      String EmNo = txtEmergencyNo.getText();
+      
+      
+      
+      stmt = conn.createStatement();
+      
+      String sql = "INSERT INTO donor(Name,BloodGroup,Age,Address,NRS,City,PhoneNo,EmergencyNo) VALUES('"+name+"','"+BloodGroup+"',"+age+",'"+address+"','"+NRS+"','"+city+"','"+PhNo+"','"+EmNo+"')";
+      String sql2 = "SELECT * FROM donor";
+      System.out.print(sql);
+      
+      stmt.executeUpdate(sql);
+      
+         }
+         catch(SQLException e)
+         {
+         } catch (ClassNotFoundException ex) {
+            Logger.getLogger(NewJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btnAddDonorActionPerformed
 
     private void btnAddRequestorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddRequestorActionPerformed
@@ -478,6 +544,14 @@ public class NewJFrame extends javax.swing.JFrame {
     private void txtHospNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHospNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtHospNameActionPerformed
+
+    private void txtAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAgeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAgeActionPerformed
+
+    private void txtEmergencyNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmergencyNoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEmergencyNoActionPerformed
 
     /**
      * @param args the command line arguments
