@@ -4,24 +4,32 @@
  * and open the template in the editor.
  */
 package clotui;
+
 import java.awt.BorderLayout;
 import java.awt.HeadlessException;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Vector;
-import javax.swing.*;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
-
 
 /**
  *
  * @author Badal
  */
-public class NewJFrame1 extends javax.swing.JFrame {
+public final class NewJFrame2 extends javax.swing.JFrame {
 
     /**
-     * Creates new form NewJFrame1
+     * Creates new form NewJFrame2
      */
-    public NewJFrame1() {
+    public NewJFrame2() {
         initComponents();
         showPane();
     }
@@ -35,7 +43,7 @@ public class NewJFrame1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -68,21 +76,19 @@ public class NewJFrame1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NewJFrame2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NewJFrame2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NewJFrame2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NewJFrame2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
-    
-    // Closes the Connection
-
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new NewJFrame1().setVisible(true);
             }
@@ -94,7 +100,7 @@ public class NewJFrame1 extends javax.swing.JFrame {
     ResultSetMetaData metaData = rs.getMetaData();
 
     // names of columns
-    Vector<String> columnNames = new Vector<String>();
+    Vector<String> columnNames = new Vector<>();
     int columnCount = metaData.getColumnCount();
     for (int column = 1; column <= columnCount; column++) {
         columnNames.add(metaData.getColumnName(column));
@@ -152,6 +158,7 @@ public class NewJFrame1 extends javax.swing.JFrame {
     }
         
     }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
