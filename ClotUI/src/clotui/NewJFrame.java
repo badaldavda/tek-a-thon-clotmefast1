@@ -5,7 +5,6 @@
  */
 package clotui;
 
-import  java.lang.*;
 import static java.lang.Integer.parseInt;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -14,7 +13,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.ButtonGroup;
 
 /**
  *
@@ -30,9 +28,6 @@ public class NewJFrame extends javax.swing.JFrame {
         groupButton();
     }
     private void groupButton(){
-    ButtonGroup bg1=new ButtonGroup();
-    bg1.add(rdbContPref1);
-    bg1.add(rdbContPref2);
 }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -43,6 +38,10 @@ public class NewJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jDialog1 = new javax.swing.JDialog();
+        jDialog2 = new javax.swing.JDialog();
+        jFrame1 = new javax.swing.JFrame();
+        jFrame2 = new javax.swing.JFrame();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
         lblCity = new javax.swing.JLabel();
@@ -65,8 +64,7 @@ public class NewJFrame extends javax.swing.JFrame {
         btnReset = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         lblBloodGroup1 = new javax.swing.JLabel();
-        rdbContPref2 = new javax.swing.JRadioButton();
-        lblEmergencyContactNumber = new javax.swing.JTextField();
+        txtEmergencyContactNumber = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         cbxBloodGroup = new javax.swing.JComboBox();
         txtNearestRailwayStation1 = new javax.swing.JTextField();
@@ -75,15 +73,60 @@ public class NewJFrame extends javax.swing.JFrame {
         lblage2 = new javax.swing.JLabel();
         txtContact = new javax.swing.JTextField();
         txtName1 = new javax.swing.JTextField();
-        lblEmergencyContactName = new javax.swing.JTextField();
+        txtEmergencyContactName = new javax.swing.JTextField();
         lblage = new javax.swing.JLabel();
         lblName1 = new javax.swing.JLabel();
-        rdbContPref1 = new javax.swing.JRadioButton();
         jLabel2 = new javax.swing.JLabel();
         txtAge1 = new javax.swing.JTextField();
         btnAddRequestor = new javax.swing.JButton();
         txtHospName = new javax.swing.JTextField();
         lblHospName = new javax.swing.JLabel();
+        cbxContPref = new javax.swing.JComboBox();
+        jPanel3 = new javax.swing.JPanel();
+
+        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
+        jDialog1.getContentPane().setLayout(jDialog1Layout);
+        jDialog1Layout.setHorizontalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jDialog1Layout.setVerticalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jDialog2Layout = new javax.swing.GroupLayout(jDialog2.getContentPane());
+        jDialog2.getContentPane().setLayout(jDialog2Layout);
+        jDialog2Layout.setHorizontalGroup(
+            jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jDialog2Layout.setVerticalGroup(
+            jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
+        jFrame1.getContentPane().setLayout(jFrame1Layout);
+        jFrame1Layout.setHorizontalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jFrame1Layout.setVerticalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jFrame2Layout = new javax.swing.GroupLayout(jFrame2.getContentPane());
+        jFrame2.getContentPane().setLayout(jFrame2Layout);
+        jFrame2Layout.setHorizontalGroup(
+            jFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jFrame2Layout.setVerticalGroup(
+            jFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -230,7 +273,7 @@ public class NewJFrame extends javax.swing.JFrame {
                             .addComponent(lblPhoneNo))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnAddDonor)
                             .addComponent(btnReset))
@@ -241,16 +284,9 @@ public class NewJFrame extends javax.swing.JFrame {
 
         lblBloodGroup1.setText("Blood Group");
 
-        rdbContPref2.setText("Alternate Contact");
-        rdbContPref2.addActionListener(new java.awt.event.ActionListener() {
+        txtEmergencyContactNumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rdbContPref2ActionPerformed(evt);
-            }
-        });
-
-        lblEmergencyContactNumber.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lblEmergencyContactNumberActionPerformed(evt);
+                txtEmergencyContactNumberActionPerformed(evt);
             }
         });
 
@@ -291,13 +327,6 @@ public class NewJFrame extends javax.swing.JFrame {
 
         lblName1.setText("Name :");
 
-        rdbContPref1.setText("One-self");
-        rdbContPref1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rdbContPref1ActionPerformed(evt);
-            }
-        });
-
         jLabel2.setText("Emergency Contact Number");
 
         btnAddRequestor.setText("Add Requestor");
@@ -314,6 +343,8 @@ public class NewJFrame extends javax.swing.JFrame {
         });
 
         lblHospName.setText("Hospital Name");
+
+        cbxContPref.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "OneSelf", "EmergencyContact" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -334,9 +365,10 @@ public class NewJFrame extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(14, 14, 14)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblEmergencyContactNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblEmergencyContactName, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(txtEmergencyContactNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtEmergencyContactName, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cbxContPref, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 36, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -352,13 +384,8 @@ public class NewJFrame extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
                             .addComponent(lblage2)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(lblContactPreference)
-                                .addGap(18, 18, 18)
-                                .addComponent(rdbContPref1)
-                                .addGap(18, 18, 18)
-                                .addComponent(rdbContPref2)))
-                        .addGap(0, 15, Short.MAX_VALUE)))
+                            .addComponent(lblContactPreference))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(40, 40, 40)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -402,22 +429,34 @@ public class NewJFrame extends javax.swing.JFrame {
                         .addGap(18, 18, 18)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblage2)
-                    .addComponent(lblEmergencyContactName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtEmergencyContactName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(lblEmergencyContactNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtEmergencyContactNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblContactPreference)
-                    .addComponent(rdbContPref1)
-                    .addComponent(rdbContPref2))
+                    .addComponent(cbxContPref, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnAddRequestor)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Add Requestor", jPanel1);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 440, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 277, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("tab3", jPanel3);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -430,128 +469,186 @@ public class NewJFrame extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTabbedPane1)
-                .addContainerGap())
+            .addComponent(jTabbedPane1)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void lblEmergencyContactNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lblEmergencyContactNumberActionPerformed
+    private void txtHospNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHospNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_lblEmergencyContactNumberActionPerformed
+    }//GEN-LAST:event_txtHospNameActionPerformed
 
-    private void cbxBloodGroupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxBloodGroupActionPerformed
+    private void btnAddRequestorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddRequestorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cbxBloodGroupActionPerformed
 
-    private void txtNearestRailwayStation1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNearestRailwayStation1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNearestRailwayStation1ActionPerformed
+        String name=txtName1.getText();
+        int age = 0;
+        try{
+            age = Integer.parseInt(txtAge1.getText());
+        }
+        catch(NumberFormatException e)
+        {
+            System.out.println(e);
+        }
+        String bloodGrp=(String)cbxBloodGroup.getSelectedItem();
+        String contPref=(String)cbxContPref.getSelectedItem();
+        int conpref = 0;
+        if(null != contPref)
+        switch (contPref) {
+            case "OneSelf":
+            conpref=1;
+            break;
+            case "Emergency":
+            conpref=2;
+            break;
+        }
+        System.out.println(contPref);
+        String address=txtAddress.getText();
+        String NRS=txtNearestRailwayStation1.getText();
+        String city=txtCity.getText();
+        String phno=txtContact.getText();
+        String emerName=txtEmergencyContactName.getText();
+        String emerNo=txtEmergencyContactNumber.getText();
+        String hospName= txtHospName.getText();
 
-    private void txtContactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContactActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtContactActionPerformed
+        final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+        final String DB_URL = "jdbc:mysql://localhost/cmf";
+
+        //  Database credentials
+        final String USER = "root";
+        final String PASS = "";
+
+        Connection conn;
+        conn = null;
+        Statement stmt;
+        stmt = null;
+        try{
+            //STEP 2: Register JDBC driver
+            Class.forName(JDBC_DRIVER);
+
+            //STEP 3: Open a connection
+            System.out.println("Connecting to a selected database...");
+            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+
+            stmt = conn.createStatement();/*
+
+            String sql = "INSERT INTO donor(Name,BloodGroup,Age,Address,NRS,City,PhoneNo,EmergencyNo) VALUES('"+name+"','"+BloodGroup+"',"+age+",'"+address+"','"+NRS+"','"+city+"','"+PhNo+"','"+EmNo+"')";
+            String sql2 = "SELECT * FROM donor";
+            System.out.print(sql);
+
+            stmt.executeUpdate(sql);*/
+
+            stmt = conn.createStatement();
+
+            String sql3 = "insert into requestor(Name,BloodGroup,Age,NRS,Contact,HName,ECNa,ECNo,ConPre,HAddress) VALUES('"+name+"','"+bloodGrp+"',"+age+",'"+NRS+"','"+phno+"','"+hospName+"','"+emerName+"','"+emerNo+"',"+conpref+",'hello');";
+            System.out.println(sql3);
+            try{
+                stmt.executeUpdate(sql3);
+            }
+            catch(Exception e)
+            {
+                System.out.println(e);
+            }
+            System.out.println(sql3);
+
+        }catch(SQLException e){} catch (ClassNotFoundException ex) {
+            Logger.getLogger(NewJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        NewJFrame1 newFrame=new NewJFrame1();
+        newFrame.setVisible(true);
+        
+    }//GEN-LAST:event_btnAddRequestorActionPerformed
 
     private void txtName1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtName1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtName1ActionPerformed
 
-    private void txtNearestRailwayStationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNearestRailwayStationActionPerformed
+    private void txtContactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContactActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNearestRailwayStationActionPerformed
+    }//GEN-LAST:event_txtContactActionPerformed
+
+    private void txtNearestRailwayStation1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNearestRailwayStation1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNearestRailwayStation1ActionPerformed
+
+    private void cbxBloodGroupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxBloodGroupActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbxBloodGroupActionPerformed
+
+    private void txtEmergencyContactNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmergencyContactNumberActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEmergencyContactNumberActionPerformed
+
+    private void btnAddDonorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddDonorActionPerformed
+
+        // TODO add your handling code here:
+
+        final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+        final String DB_URL = "jdbc:mysql://localhost/cmf";
+
+        //  Database credentials
+        final String USER = "root";
+        final String PASS = "";
+
+        Connection conn = null;
+        Statement stmt = null;
+        try{
+            //STEP 2: Register JDBC driver
+            Class.forName("com.mysql.jdbc.Driver");
+
+            //STEP 3: Open a connection
+            System.out.println("Connecting to a selected database...");
+            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+            System.out.println("Connected database successfully...");
+
+            String name = txtName.getText();
+            String BloodGroup =(String) cvxBloodGroup.getSelectedItem();
+            int age = parseInt(txtAge.getText());
+            String address = txtAddress.getText();
+            String NRS = txtNearestRailwayStation.getText();
+            String city = txtCity.getText();
+            String PhNo = txtPhoneNo.getText();
+            String EmNo = txtEmergencyNo.getText();
+
+            stmt = conn.createStatement();
+
+            String sql = "INSERT INTO donor(Name,BloodGroup,Age,Address,NRS,City,PhoneNo,EmergencyNo) VALUES('"+name+"','"+BloodGroup+"',"+age+",'"+address+"','"+NRS+"','"+city+"','"+PhNo+"','"+EmNo+"')";
+            String sql2 = "SELECT * FROM donor";
+            System.out.print(sql);
+
+            stmt.executeUpdate(sql);
+
+        }
+        catch(SQLException e)
+        {
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(NewJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       /* String BldGrp;
+        String NRailStn;
+        public String getUsername(){
+        
+        }*/
+    }//GEN-LAST:event_btnAddDonorActionPerformed
+
+    private void txtEmergencyNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmergencyNoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEmergencyNoActionPerformed
 
     private void txtPhoneNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPhoneNoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPhoneNoActionPerformed
 
-    private void rdbContPref1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbContPref1ActionPerformed
+    private void txtNearestRailwayStationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNearestRailwayStationActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_rdbContPref1ActionPerformed
-
-    private void rdbContPref2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbContPref2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rdbContPref2ActionPerformed
-
-    private void btnAddDonorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddDonorActionPerformed
-
-        // TODO add your handling code here:
-        
-        final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-   final String DB_URL = "jdbc:mysql://localhost/cmf";
-
-   //  Database credentials
-    final String USER = "root";
-    final String PASS = "";
-        
-         Connection conn = null;
-         Statement stmt = null;
-         try{
-      //STEP 2: Register JDBC driver
-      Class.forName("com.mysql.jdbc.Driver");
-
-      //STEP 3: Open a connection
-      System.out.println("Connecting to a selected database...");
-      conn = DriverManager.getConnection(DB_URL, USER, PASS);
-      System.out.println("Connected database successfully...");
-      
-      
-      String name = txtName.getText();
-      String BloodGroup =(String) cvxBloodGroup.getSelectedItem();
-      int age = parseInt(txtAge.getText());
-      String address = txtAddress.getText();
-      String NRS = txtNearestRailwayStation.getText();
-      String city = txtCity.getText();
-      String PhNo = txtPhoneNo.getText();
-      String EmNo = txtEmergencyNo.getText();
-      
-      
-      
-      stmt = conn.createStatement();
-      
-      String sql = "INSERT INTO donor(Name,BloodGroup,Age,Address,NRS,City,PhoneNo,EmergencyNo) VALUES('"+name+"','"+BloodGroup+"',"+age+",'"+address+"','"+NRS+"','"+city+"','"+PhNo+"','"+EmNo+"')";
-      String sql2 = "SELECT * FROM donor";
-      System.out.print(sql);
-      
-      stmt.executeUpdate(sql);
-      
-         }
-         catch(SQLException e)
-         {
-         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(NewJFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_btnAddDonorActionPerformed
-
-    private void btnAddRequestorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddRequestorActionPerformed
-        // TODO add your handling code here:
-        name=txtName.getText();
-        age=parseInt(txtAge.getText());
-        bloodGrp=(String)cbxBloodGroup.getSelectedItem();
-        address=txtAddress.getText();
-        railwayStn=txtNearestRailwayStation.getText();
-        city=txtCity.getText();
-        phno=txtPhoneNo.getText();
-        emerNo=txtEmergencyNo.getText();
-        hospName= txtHospName.getName();
-        ButtonGroup br=new ButtonGroup();
-        br.add(rdbContPref2);
-        br.add(rdbContPref1);
-    }//GEN-LAST:event_btnAddRequestorActionPerformed
-
-    private void txtHospNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHospNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtHospNameActionPerformed
+    }//GEN-LAST:event_txtNearestRailwayStationActionPerformed
 
     private void txtAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAgeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtAgeActionPerformed
-
-    private void txtEmergencyNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmergencyNoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtEmergencyNoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -569,15 +666,11 @@ public class NewJFrame extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        
         //</editor-fold>
 
         /* Create and display the form */
@@ -588,9 +681,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
     }
-String name,bloodGrp,address,railwayStn,city,pincode,phno,emerNo,pinCode,hospName,hospaddr,emerName;
-    boolean conPref=false;
-    int age=0;
+
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel LblAge;
@@ -598,11 +689,17 @@ String name,bloodGrp,address,railwayStn,city,pincode,phno,emerNo,pinCode,hospNam
     private javax.swing.JButton btnAddRequestor;
     private javax.swing.JButton btnReset;
     private javax.swing.JComboBox cbxBloodGroup;
+    private javax.swing.JComboBox cbxContPref;
     private javax.swing.JComboBox cvxBloodGroup;
+    private javax.swing.JDialog jDialog1;
+    private javax.swing.JDialog jDialog2;
+    private javax.swing.JFrame jFrame1;
+    private javax.swing.JFrame jFrame2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel lblAddress;
     private javax.swing.JLabel lblBloodGroup;
@@ -610,8 +707,6 @@ String name,bloodGrp,address,railwayStn,city,pincode,phno,emerNo,pinCode,hospNam
     private javax.swing.JLabel lblCity;
     private javax.swing.JLabel lblContact;
     private javax.swing.JLabel lblContactPreference;
-    private javax.swing.JTextField lblEmergencyContactName;
-    private javax.swing.JTextField lblEmergencyContactNumber;
     private javax.swing.JLabel lblEmergencyNo;
     private javax.swing.JLabel lblHospName;
     private javax.swing.JLabel lblName;
@@ -620,13 +715,13 @@ String name,bloodGrp,address,railwayStn,city,pincode,phno,emerNo,pinCode,hospNam
     private javax.swing.JLabel lblPhoneNo;
     private javax.swing.JLabel lblage;
     private javax.swing.JLabel lblage2;
-    private javax.swing.JRadioButton rdbContPref1;
-    private javax.swing.JRadioButton rdbContPref2;
     private javax.swing.JTextField txtAddress;
     private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtAge1;
     private javax.swing.JTextField txtCity;
     private javax.swing.JTextField txtContact;
+    private javax.swing.JTextField txtEmergencyContactName;
+    private javax.swing.JTextField txtEmergencyContactNumber;
     private javax.swing.JTextField txtEmergencyNo;
     private javax.swing.JTextField txtHospName;
     private javax.swing.JTextField txtName;
